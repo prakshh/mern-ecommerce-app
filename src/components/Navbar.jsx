@@ -1,13 +1,10 @@
 import { Badge } from '@material-ui/core';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
-// import Badge from '@mui/material/Badge';
-// import MailIcon from '@mui/icons-material/Mail';
 import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
     height: 60px;
-    /* background-color: pink; */
 `;
 const Wrapper = styled.div`
     padding: 10px 20px;
@@ -16,7 +13,6 @@ const Wrapper = styled.div`
     justify-content: space-between;
 `;
 const Left = styled.div`
-    /* width: 33.3%; */
     flex: 1;
     display: flex;
     align-items: center;
@@ -62,7 +58,7 @@ const Navbar = () => {
                     <Language>EN</Language>
                     <SearchContainer>
                         <Input /> 
-                        <Search />
+                        <Search style={{color:"gray", fontSize:16}} />
                     </SearchContainer>
                 </Left>
                 <Center>
