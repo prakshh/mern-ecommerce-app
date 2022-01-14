@@ -25,11 +25,13 @@ const Arrow = styled.div`
     margin: auto;
     cursor: pointer;
     opacity: 0.5;
+    z-index: 2;
 `;
 
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
+    transform: translateX(0vw);
 `;
 const Slide = styled.div`
     width: 100%;
@@ -66,9 +68,14 @@ const Button = styled.button`
 `
 
 const Slider = () => {
+
+    const handleClick = (direction) => {
+
+    };
+
     return (
         <Container>
-            <Arrow direction="left">
+            <Arrow direction="left" onClick={()=>handleClick("left")}>
                 <ArrowLeftOutlined />
             </Arrow>
             <Wrapper>
@@ -84,7 +91,7 @@ const Slider = () => {
                 </Slide>
                 <Slide bg="fcf1ed">
                     <ImgContainer>
-                        <Image src="slider1.png"/>
+                        <Image src="slider1b.jpg"/>
                     </ImgContainer>
                     <InfoContainer>
                         <Title>WINTER SALE</Title>
@@ -94,7 +101,7 @@ const Slider = () => {
                 </Slide>
                 <Slide bg="fbf0f4">
                     <ImgContainer>
-                        <Image src="slider1.png"/>
+                        <Image src="slider1c.jpg"/>
                     </ImgContainer>
                     <InfoContainer>
                         <Title>POPULAR SALE</Title>
@@ -103,7 +110,7 @@ const Slider = () => {
                     </InfoContainer>
                 </Slide>
             </Wrapper>
-            <Arrow direction="right">
+            <Arrow direction="right" onClick={()=>handleClick("right")}>
                 <ArrowRightOutlined />
             </Arrow>
         </Container>
