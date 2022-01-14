@@ -5,8 +5,8 @@ const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
-    /* background-color: coral; */
     position: relative;
+    overflow: hidden;
 `
 const Arrow = styled.div`
     width: 50px;
@@ -29,12 +29,14 @@ const Arrow = styled.div`
 
 const Wrapper = styled.div`
     height: 100%;
+    display: flex;
 `;
 const Slide = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
+    background-color: #${props => props.bg};
 `
 const ImgContainer = styled.div`
     height: 100%;
@@ -70,12 +72,32 @@ const Slider = () => {
                 <ArrowLeftOutlined />
             </Arrow>
             <Wrapper>
-                <Slide>
+                <Slide bg="f5fafd">
                     <ImgContainer>
                         <Image src="slider1.png"/>
                     </ImgContainer>
                     <InfoContainer>
                         <Title>SUMMER SALE</Title>
+                        <Desc>DON'T COMPROMISE ON STYLE! GET 30% OFF FOR NEW ARRIVALS</Desc>
+                        <Button>SHOW NOW</Button>
+                    </InfoContainer>
+                </Slide>
+                <Slide bg="fcf1ed">
+                    <ImgContainer>
+                        <Image src="slider1.png"/>
+                    </ImgContainer>
+                    <InfoContainer>
+                        <Title>WINTER SALE</Title>
+                        <Desc>DON'T COMPROMISE ON STYLE! GET 30% OFF FOR NEW ARRIVALS</Desc>
+                        <Button>SHOW NOW</Button>
+                    </InfoContainer>
+                </Slide>
+                <Slide bg="fbf0f4">
+                    <ImgContainer>
+                        <Image src="slider1.png"/>
+                    </ImgContainer>
+                    <InfoContainer>
+                        <Title>POPULAR SALE</Title>
                         <Desc>DON'T COMPROMISE ON STYLE! GET 30% OFF FOR NEW ARRIVALS</Desc>
                         <Button>SHOW NOW</Button>
                     </InfoContainer>
