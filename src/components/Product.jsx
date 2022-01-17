@@ -30,7 +30,7 @@ const Info = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background-color: gray;
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 3;
     display: flex;
     align-items: center;
