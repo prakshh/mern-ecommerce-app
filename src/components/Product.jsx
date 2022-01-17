@@ -11,9 +11,16 @@ const Container = styled.div`
     justify-content: center;
     background-color: #f5fbfd;
 `
-const Circle = styled.div``
+const Circle = styled.div`
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+`
 const Image = styled.img`
     height: 75%;
+    z-index: 2;
 `
 const Info = styled.div``
 const Icon = styled.div``
