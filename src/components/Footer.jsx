@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Pinterest, Twitter } from '@material-ui/icons';
+import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from '@material-ui/icons';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -55,7 +55,18 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex: 1;
     padding: 20px;
+`;
+
+const ContactItem = styled.div`
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 `
+const Payment= styled.img`
+    width: 50%;
+`
+
+
 
 const Footer = () => {
     return (
@@ -95,6 +106,19 @@ const Footer = () => {
                     <ListItem>Terms</ListItem>
                 </List>
             </Center>
+            <Right>
+            <Title>Contact</Title>
+            <ContactItem>
+                <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+            </ContactItem>
+            <ContactItem>
+                <Phone style={{marginRight:"10px"}}/> +1 234 56 78
+            </ContactItem>
+            <ContactItem>
+                <MailOutline style={{marginRight:"10px"}}/> contact@lama
+            </ContactItem>
+            <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+        </Right>
         </Container>
     )
 }
