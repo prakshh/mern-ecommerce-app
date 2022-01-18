@@ -1,3 +1,4 @@
+import { Add, Remove } from "@material-ui/icons"
 import styled from "styled-components"
 import Announcement from "../components/Announcement"
 import Footer from "../components/Footer"
@@ -59,6 +60,11 @@ const FilterSize = styled.select`
 `
 const FilterSizeOption = styled.option``
 
+const AddContainer = styled.div``
+const AmountContainer = styled.div``
+const Amount = styled.span``
+const Button = styled.button``
+
 const Product = () => {
     return (
         <Container>
@@ -96,6 +102,14 @@ const Product = () => {
                             </FilterSize>
                         </Filter>
                     </FilterContainer>
+                    <AddContainer>
+                        <AmountContainer>
+                            <Remove />
+                            <Amount>1</Amount>
+                            <Add />
+                        </AmountContainer>
+                        <Button>ADD TO CART</Button>
+                    </AddContainer>
                 </InfoContainer>
             </Wrapper>
             <Newsletter />
