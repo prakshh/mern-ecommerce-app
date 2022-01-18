@@ -35,9 +35,15 @@ const SocialIcon = styled.div`
 
 const Center = styled.div`
     flex: 1;
-`
+    padding: 20px;
+`;
+const Title = styled.h1``
+const List = styled.ul``
+const ListItem = styled.li``
+
 const Right = styled.div`
     flex: 1;
+    padding: 20px;
 `
 
 const Footer = () => {
@@ -63,7 +69,21 @@ const Footer = () => {
                     </SocialIcon>
                 </SocialContainer>
             </Left>
-        <Center></Center>
+            <Center>
+                <Title>Useful Links</Title>
+                <List>
+                    <ListItem>Home</ListItem>
+                    <ListItem>Cart</ListItem>
+                    <ListItem>Man Fashion</ListItem>
+                    <ListItem>Woman Fashion</ListItem>
+                    <ListItem>Accessories</ListItem>
+                    <ListItem>My Account</ListItem>
+                    <ListItem>Order Tracking</ListItem>
+                    <ListItem>Wishlist</ListItem>
+                    <ListItem>Wishlist</ListItem>
+                    <ListItem>Terms</ListItem>
+                </List>
+            </Center>
         </Container>
     )
 }
