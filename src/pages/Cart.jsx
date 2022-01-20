@@ -1,3 +1,4 @@
+import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
@@ -37,16 +38,54 @@ const Bottom = styled.div`
 const Info = styled.div`
     flex: 3;
 `
-const Product = styled.div``
-const ProductDetail = styled.div``
-const Image = styled.img``
-const Details = styled.div``
+const Product = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+const ProductDetail = styled.div`
+    flex: 2;
+    display: flex;
+`
+const Image = styled.img`
+    width: 200px;
+`
+const Details = styled.div`
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+`
 const ProductName = styled.span``
 const ProductId = styled.span``
-const ProductColor = styled.span``
+const ProductColor = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: ${(props) => props.color};
+`
 const ProductSize = styled.span``
 
-const PriceDetail = styled.span``
+const PriceDetail = styled.span`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+const ProductAmountContainer = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+`
+const ProductAmount = styled.div`
+    font-size: 24px;
+    margin: 5px;
+`
+const ProductPrice = styled.div`
+    font-size: 30px;
+    font-weight: 300;
+`
+
 
 const Summary = styled.div`
     flex: 1;
@@ -74,12 +113,17 @@ const Cart = () => {
                             <Details>
                                 <ProductName><b>Product:</b>JESSIE THUNDER SHOES</ProductName>
                                 <ProductId><b>ID:</b>9876543210</ProductId>
-                                <ProductColor />
+                                <ProductColor color="black" />
                                 <ProductSize><b>Size:</b>36.5</ProductSize>
                             </Details>
                         </ProductDetail>
                         <PriceDetail>
-                            price
+                            <ProductAmountContainer>
+                                <Add />
+                                <ProductAmount>2</ProductAmount>
+                                <Remove />
+                            </ProductAmountContainer>
+                            <ProductPrice>$ 40</ProductPrice>
                         </PriceDetail>
                     </Product>
                 </Info>
