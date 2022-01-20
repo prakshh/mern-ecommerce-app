@@ -93,8 +93,12 @@ const Hr = styled.hr`
 
 const Summary = styled.div`
     flex: 1;
-    /* background-color: red; */
 `
+const SummaryTitle = styled.h1``
+const SummaryItem = styled.div``
+const SummaryItemText = styled.span``
+const SummaryItemPrice = styled.span``
+const Button = styled.button``
 
 
 const Cart = () => {
@@ -154,7 +158,26 @@ const Cart = () => {
                         </PriceDetail>
                     </Product>
                 </Info>
-                <Summary>summary</Summary>
+                <Summary>
+                    <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+                    <SummaryItem>
+                        <SummaryItemText>Subtotal</SummaryItemText>
+                        <SummaryItemPrice>$ 100</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem>
+                        <SummaryItemText>Estimated Shipping</SummaryItemText>
+                        <SummaryItemPrice>$ 5.90</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem>
+                        <SummaryItemText>Shipping Discount</SummaryItemText>
+                        <SummaryItemPrice>$ -5.90</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem>
+                        <SummaryItemText type="total">Total</SummaryItemText>
+                        <SummaryItemPrice>$ 100</SummaryItemPrice>
+                    </SummaryItem>
+                    <Button>CHECKOUT NOW</Button>
+                </Summary>
             </Bottom>
         </Wrapper>
           <Footer />
