@@ -85,12 +85,17 @@ const ProductPrice = styled.div`
     font-size: 30px;
     font-weight: 300;
 `
-
+const Hr = styled.hr`
+    background-color: #eee;
+    border: none;
+    height: 1px;
+`
 
 const Summary = styled.div`
     flex: 1;
     /* background-color: red; */
 `
+
 
 const Cart = () => {
   return (
@@ -111,10 +116,10 @@ const Cart = () => {
                         <ProductDetail>
                             <Image src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A"/>
                             <Details>
-                                <ProductName><b>Product:</b>JESSIE THUNDER SHOES</ProductName>
-                                <ProductId><b>ID:</b>9876543210</ProductId>
+                                <ProductName><b>Product: </b>JESSIE THUNDER SHOES</ProductName>
+                                <ProductId><b>ID: </b>9876543210</ProductId>
                                 <ProductColor color="black" />
-                                <ProductSize><b>Size:</b>36.5</ProductSize>
+                                <ProductSize><b>Size: </b>36.5</ProductSize>
                             </Details>
                         </ProductDetail>
                         <PriceDetail>
@@ -124,6 +129,28 @@ const Cart = () => {
                                 <Remove />
                             </ProductAmountContainer>
                             <ProductPrice>$ 40</ProductPrice>
+                        </PriceDetail>
+                    </Product>
+
+                    <Hr />
+
+                    <Product>
+                        <ProductDetail>
+                            <Image src="https://i.pinimg.com/originals/2d/af/f8/2daff8e0823e51dd752704a47d5b795c.png"/>
+                            <Details>
+                                <ProductName><b>Product: </b>HAKURA T-SHIRT</ProductName>
+                                <ProductId><b>ID: </b>9876543211</ProductId>
+                                <ProductColor color="gray" />
+                                <ProductSize><b>Size: </b>M</ProductSize>
+                            </Details>
+                        </ProductDetail>
+                        <PriceDetail>
+                            <ProductAmountContainer>
+                                <Add />
+                                <ProductAmount>1</ProductAmount>
+                                <Remove />
+                            </ProductAmountContainer>
+                            <ProductPrice>$ 20</ProductPrice>
                         </PriceDetail>
                     </Product>
                 </Info>
