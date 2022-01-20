@@ -15,7 +15,7 @@ const Container = styled.div`
     background-size: cover;
 `
 const Wrapper = styled.div`
-    width: 40%;
+    width: 25%;
     padding: 20px;
     background-color: white;
 `
@@ -25,13 +25,14 @@ const Title = styled.h1`
 `
 const Form = styled.form`
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
 `
 
 const Input = styled.input`
     flex: 1;
     min-width: 40%;
-    margin: 20px 10px 0px 0px;
+    margin: 10px 0px;
     padding: 10px;
 `
 const Button = styled.button`
@@ -41,9 +42,15 @@ const Button = styled.button`
     background-color: teal;
     color: white;
     cursor: pointer;
+    margin-bottom: 10px;
 `
 
-const Link = styled.a``   
+const Link = styled.a`
+    margin: 5px 0px;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+`   
 
 const Login = () => {
     return (
@@ -54,7 +61,7 @@ const Login = () => {
                     <Input placeholder="username" />
                     <Input placeholder="password" />
                     <Button>LOGIN</Button>
-                    <Link>DON"T REMEMBER PASSWORD?</Link>
+                    <Link>DON'T REMEMBER PASSWORD?</Link>
                     <Link>CREATE NEW ACCOUNT</Link>
                 </Form>
             </Wrapper>
