@@ -1,6 +1,6 @@
 # The Lama Shop
 
-### [Live Demo](https://the-lama-shop.vercel.app/)
+### [Live Demo](https://mern-ecommerce-prakshh.netlify.app/)
 
 An ecommerce platform made with React, Redux, Stripe, Email Js, Material Ui for the frontend and Node Js, Express, MongoDb, JWT for the backend.
 
