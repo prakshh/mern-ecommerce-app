@@ -3,8 +3,12 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { UserGroupIcon } from '@heroicons/react/solid';
+import { LogoutIcon } from '@heroicons/react/outline';
+import { useCallback, useState } from 'react';
+import { logout } from '../redux/userRedux';
 
 const Container = styled.div`
   height: 60px;
@@ -71,6 +75,11 @@ const MenuItem = styled.div`
 const Navbar = () => {
   
   const quantity = useSelector(state=>state.cart.quantity);
+  const user = useSelector((state) => state.user.currentUser);
+  const dispatch = useDispatch();
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleLogout = useCallback(() => dispatch(logout()), [dispatch]);
 
   return (
     <Container>
@@ -86,8 +95,46 @@ const Navbar = () => {
           <Logo>LAMA.</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          {!user && (
+            <>
+              <Link to="/register"><MenuItem>REGISTER</MenuItem></Link>
+              <Link to="/login"><MenuItem>SIGN IN</MenuItem></Link>
+            </>
+          )}
+          
+          {user && (
+            <>
+            {/* <LogoutIcon className="h-6 w-6 text-gray-600 mr-2 " /> */}
+            <div onClick={handleLogout}>
+                <button className="text-[12px] sm:text-[14px] ">
+                  LOGOUT
+                </button>
+            </div>
+              {/* <div
+                onClick={() => setShowPopup((prev) => !prev)}
+                className="relative cursor-pointer ml-[10px] border  space-x-3 rounded p-2 flex justify-between items-center "
+              >
+                <UserGroupIcon className="w-6 h-6 " />
+                <div className="text-[12px] sm:text-[14px] tracking-wide ">
+                  {user?.username.toUpperCase()}
+                </div>
+                <div
+                  onClick={handleLogout}
+                  className={`bg-white shadow-lg absolute bottom-[-70px] ${
+                    !showPopup && 'opacity-0'
+                  } z-[3] p-4 rounded-md flex items-center
+                  transition duration-300 ease-in-out `}
+                >
+                  <LogoutIcon className="h-6 w-6 text-gray-600 mr-2 " />
+                  <button className="text-[12px] sm:text-[14px] ">
+                    LOGOUT
+                  </button>
+                </div>
+              </div> */}
+            </>
+          )}
+
+
           <Link to="/cart">
             <MenuItem>
               <Badge badgeContent={quantity} color="primary">
