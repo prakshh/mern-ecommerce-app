@@ -92,7 +92,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>LAMA.</Logo>
+          <Logo>SHOPPERS STOP.</Logo>
         </Center>
         <Right>
           {!user && (
