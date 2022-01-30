@@ -9,9 +9,12 @@ const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/stripe");
 const cors = require("cors");
-require("dotenv").config();
 
+require("dotenv").config();
 dotenv.config();
+
+app.use(cors());
+app.use(express.json());
 
 mongoose
   .connect(process.env.MONGO_URL)
@@ -20,8 +23,7 @@ mongoose
     console.log(err);
   });
 
-app.use(cors());
-app.use(express.json());
+
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
