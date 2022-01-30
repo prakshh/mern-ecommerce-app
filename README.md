@@ -1,8 +1,8 @@
-# The Lama Shop
+# SHOPPERS STOP.
 
 ### [Live Demo](https://mern-ecommerce-prakshh.netlify.app/)
 
-An ecommerce platform made with React, Redux, Stripe, Email Js, Material Ui for the frontend and Node Js, Express, MongoDb, JWT for the backend.
+An ecommerce platform made with React, Redux, Stripe, Material Ui for the frontend and Node Js, Express, MongoDb, JWT for the backend.
 
 ## App Features
 - This ecommerce store is buit using React, Redux, Styled components, Material UI. 
@@ -23,3 +23,15 @@ An ecommerce platform made with React, Redux, Stripe, Email Js, Material Ui for 
   - username: admin
   - password: 123456
 
+
+![shop1](public/images/1.png)
+![shop2](public/images/2.png)
+![shop3](public/images/3.png)
+![shop4](public/images/4.png)
+![shop5](public/images/5.png)
+![shop6](public/images/6.png)
+![shop7](public/images/7.png)
+![shop8](public/images/8.png)
+![shop9](public/images/9.png)
+![shop10](public/images/10.png)
+![shop11](public/images/11.png)

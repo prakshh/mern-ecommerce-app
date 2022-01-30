@@ -253,7 +253,7 @@ const Cart = () => {
             </SummaryItem>
 
             <StripeCheckout
-              name="Lama Shop"
+              name="SHOPPERS STOP."
               image="https://avatars.githubusercontent.com/u/1486366?v=4"
               billingAddress
               shippingAddress

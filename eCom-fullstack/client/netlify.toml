@@ -1,0 +1,4 @@
+[build]
+  base    = "https://github.com/prakshh/mern-ecommerce-app/tree/master/eCom-fullstack/client"
+  publish = "https://github.com/prakshh/mern-ecommerce-app/tree/master/eCom-fullstack/client/dist/"
+  command = "yarn run build"

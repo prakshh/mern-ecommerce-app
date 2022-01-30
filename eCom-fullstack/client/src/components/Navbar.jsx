@@ -55,7 +55,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
-  ${mobile({ fontSize: "24px" })}
+  ${mobile({ fontSize: "14px" })}
 `;
 const Right = styled.div`
   flex: 1;
@@ -97,8 +97,8 @@ const Navbar = () => {
         <Right>
           {!user && (
             <>
-              <Link to="/register"><MenuItem>REGISTER</MenuItem></Link>
-              <Link to="/login"><MenuItem>SIGN IN</MenuItem></Link>
+              <Link to="/register" style={{ textDecoration: 'none' }}><MenuItem>REGISTER</MenuItem></Link>
+              <Link to="/login" style={{ textDecoration: 'none' }}><MenuItem>SIGN IN</MenuItem></Link>
             </>
           )}
           
@@ -106,9 +106,7 @@ const Navbar = () => {
             <>
             {/* <LogoutIcon className="h-6 w-6 text-gray-600 mr-2 " /> */}
             <div onClick={handleLogout}>
-                <button className="text-[12px] sm:text-[14px] ">
-                  LOGOUT
-                </button>
+              <MenuItem>LOG OUT</MenuItem>
             </div>
               {/* <div
                 onClick={() => setShowPopup((prev) => !prev)}
